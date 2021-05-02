@@ -1,0 +1,25 @@
+name: Unit Tests (Coverage)
+
+on:
+  pull_request
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: '14.x'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Collect coverage
+        run: npm run test:cov > OUT; sed -n 5,8p OUT > .github/workflows/COVERAGE_REPORT
+
+      - uses: harupy/comment-on-pr@master
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          filename: COVERAGE_REPORT
