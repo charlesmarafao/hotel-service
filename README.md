@@ -11,6 +11,11 @@
   <a href="#information_source-how-to-use">How To Use</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
 </p>
 
+
+## Doc https://hotl-service.herokuapp.com/api-docs/
+## Front end Preview https://hotel-app-two.vercel.app/
+
+
 ## Technologies
 
 This project was developed for a test with the following technologies:
@@ -48,3 +53,14 @@ $ docker-compose up -d
 # Or
 $ yarn && yarn dev:server
 ```
+
+## Improvements
+Disclaimer
+I used the "typeorm" library in this project for testing purposes. For a production application I would use the "mongoose" library.
+
+Possible improvements
+
+- Add test database to be able to create integration tests
+- Add query builder class test
+- Add adds library for security (helmet)
+- add support for redis database (cache and rate limiter)
