@@ -10,10 +10,10 @@
   <a href="#rocket-technologies">Technologies</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#information_source-how-to-use">How To Use</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
 </p>
-
+<br />
 
 ## Doc https://hotl-service.herokuapp.com/api-docs/
-## Front end Preview https://hotel-app-two.vercel.app/
+## Front-end preview https://hotel-app-two.vercel.app/
 
 
 ## Technologies
@@ -55,7 +55,7 @@ $ yarn && yarn dev:server
 ```
 
 ## Improvements
-Disclaimer
+Disclaimer <br />
 I used the "typeorm" library in this project for testing purposes. For a production application I would use the "mongoose" library.
 
 Possible improvements
