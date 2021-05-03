@@ -45,5 +45,6 @@ $ cd hotel-service
 # Add .env
 $ docker-compose up -d
 
+# Or
 $ yarn && yarn dev:server
 ```
