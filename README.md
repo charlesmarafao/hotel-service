@@ -63,5 +63,5 @@ Possible improvements
 
 - Add test database to be able to create integration tests
 - Add query builder class test
-- Add adds library for security (helmet)
+- Add library for security (helmet)
 - add support for redis database (cache and rate limiter)
