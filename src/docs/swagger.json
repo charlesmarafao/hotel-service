@@ -1,0 +1,1109 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Hotel and hotel offers API",
+    "description": "Hotel and hotel offers management",
+    "version": "1.0"
+  },
+  "servers": [
+    {
+      "url": "https://hotl-service.herokuapp.com",
+      "description": "Mock Server"
+    },
+    {
+      "url": "https://hotl-service.herokuapp.com",
+      "description": "Local"
+    }
+  ],
+  "paths": {
+    "/hotels": {
+      "get": {
+        "tags": ["Hotels"],
+        "summary": "Get Hotels",
+        "description": "Hotels list and search.",
+        "operationId": "get-hotels",
+        "parameters": [
+          {
+            "name": "text",
+            "in": "query",
+            "description": "Name, city or country code",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/inline_response_200"
+                },
+                "examples": {
+                  "Exemplo": {
+                    "value": [
+                      {
+                        "id": "608dc59a692e01344b8a52e3",
+                        "type": "hotel",
+                        "hotelId": "RTGYNIBI",
+                        "chainCode": "RT",
+                        "dupeId": "700084419",
+                        "name": "ibis Goiania",
+                        "rating": "2",
+                        "cityCode": "GYN",
+                        "latitude": -16.69031,
+                        "longitude": -49.26406,
+                        "hotelDistance": {
+                          "distance": 171,
+                          "distanceUnit": "KM"
+                        },
+                        "address": {
+                          "lines": ["RUA 21 NO 154"],
+                          "postalCode": "71120120",
+                          "cityName": "GOIANIA",
+                          "countryCode": "BR",
+                          "stateCode": "GO"
+                        },
+                        "contact": {
+                          "phone": "55/62/27656050",
+                          "fax": "55/62/27656051",
+                          "email": "H3670-RE@accor.com.br"
+                        },
+                        "description": {
+                          "lang": "en",
+                          "text": "The hotel has 118 rooms and a 24-hour bar in the lobby. Located in an affluent region of the city, with easy access to the main business centers and excellent restaurants, bars and shopping centers, it is 6.2 miles (10 km) from Santa Genoveva Airport and2.5 miles (4 km) from the business center. The hotel offers free WIFI Internet access"
+                        },
+                        "media": [
+                          {
+                            "uri": "http://uat.multimediarepository.testing.amadeus.com/cmr/retrieve/hotel/D17A433B4AF4495CA20D93F55754A72D",
+                            "category": "EXTERIOR"
+                          }
+                        ],
+                        "amenities": [
+                          "ELEVATOR",
+                          "24_HOUR_FRONT_DESK",
+                          "PARKING",
+                          "220_AC",
+                          "INTERNET_SERVICES",
+                          "PETS_ALLOWED",
+                          "ACCESSIBLE_BATHS",
+                          "WHEELCHAIR_ACCESSIBLE_PUBLIC_AREA",
+                          "DISABLED_FACILITIES",
+                          "WIRELESS_CONNECTIVITY",
+                          "SMOKE_DETECTOR",
+                          "FIRE_SAFETY",
+                          "EMERGENCY_BACKUP_GENERATOR",
+                          "FIRE_DETECTORS",
+                          "EMERGENCY_LIGHTING",
+                          "GARAGE_PARKING",
+                          "PHOTOCOPIER",
+                          "MEETING_FACILITIES",
+                          "BUSINESS_CENTER",
+                          "FAX_MACHINE",
+                          "WAKEUP_SERVICE",
+                          "VOICEMAIL_IN_ROOM",
+                          "WI-FI_IN_ROOM",
+                          "DIRECT_DIAL_PHONE",
+                          "HAIR_DRYER",
+                          "CABLE_TELEVISION",
+                          "TELEVISION",
+                          "SATELLITE_TV",
+                          "CRIBS_AVAILABLE",
+                          "AIR_CONDITIONING",
+                          "SAFE"
+                        ]
+                      },
+                      {
+                        "id": "608dc59b692e01344b8a52ea",
+                        "type": "hotel",
+                        "hotelId": "RTBSBMIL",
+                        "chainCode": "RT",
+                        "dupeId": "700040194",
+                        "name": "Mercure Brasilia Eixo Hotel",
+                        "rating": "4",
+                        "cityCode": "BSB",
+                        "latitude": -15.78833,
+                        "longitude": -47.89024,
+                        "hotelDistance": {
+                          "distance": 6.6,
+                          "distanceUnit": "KM"
+                        },
+                        "address": {
+                          "lines": [
+                            "SETOR HOTELEIRO NORTE QUADRA 5",
+                            "BLOCO G"
+                          ],
+                          "postalCode": "70710300",
+                          "cityName": "BRASILIA",
+                          "countryCode": "BR",
+                          "stateCode": "DF"
+                        },
+                        "contact": {
+                          "phone": "55/61/34242000",
+                          "fax": "55/61/34242001",
+                          "email": "h3632-re@accor.com.br"
+                        },
+                        "description": {
+                          "lang": "en",
+                          "text": "With 338 apartments, the Mercure Brasília Eixo Monumental is located next to the Brasília shopping center, the TV Tower and just 9.3 miles (15 km) from Juscelino Kubitschek International Airport."
+                        },
+                        "media": [
+                          {
+                            "uri": "http://uat.multimediarepository.testing.amadeus.com/cmr/retrieve/hotel/EC5CAB35FB8545E9A1FAF7932D162D4A",
+                            "category": "EXTERIOR"
+                          }
+                        ],
+                        "amenities": [
+                          "ELEVATOR",
+                          "SAUNA",
+                          "OUTDOOR_POOL",
+                          "ROOM_SERVICE",
+                          "INTERNET_SERVICES",
+                          "220_AC",
+                          "PARKING",
+                          "GIFT_SHOP",
+                          "ACCESSIBLE_BATHS",
+                          "WHEELCHAIR_ACCESSIBLE_PUBLIC_AREA",
+                          "WIRELESS_CONNECTIVITY",
+                          "CONCIERGE",
+                          "LOUNGE",
+                          "COFFEE_SHOP",
+                          "24_HOUR_FRONT_DESK",
+                          "SOLARIUM",
+                          "SMOKE_DETECTOR",
+                          "FIRE_SAFETY",
+                          "EMERGENCY_BACKUP_GENERATOR",
+                          "FIRE_DETECTORS",
+                          "EMERGENCY_LIGHTING",
+                          "GARAGE_PARKING",
+                          "MULTILINGUAL_STAFF",
+                          "MASSAGE",
+                          "RESTAURANT",
+                          "SECRETARIAL_SERVICES",
+                          "PHOTOCOPIER",
+                          "OVERHEAD_PROJECTOR",
+                          "MEETING_FACILITIES",
+                          "MEETING_ROOMS",
+                          "BUSINESS_CENTER",
+                          "AUDIO-VISUAL_EQUIPMENT",
+                          "ALARM_CLOCK",
+                          "WAKEUP_SERVICE",
+                          "VOICEMAIL_IN_ROOM",
+                          "WI-FI_IN_ROOM",
+                          "HAIR_DRYER",
+                          "CABLE_TELEVISION",
+                          "TELEVISION",
+                          "SATELLITE_TV",
+                          "CRIBS_AVAILABLE",
+                          "DIRECT_DIAL_PHONE",
+                          "AIR_CONDITIONING",
+                          "SAFE",
+                          "NON_SMOKING_ROOMS"
+                        ]
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/hotels/{hotel_id}": {
+      "get": {
+        "tags": ["Hotels"],
+        "summary": "Get hotel by ID",
+        "description": "Get holel by ID",
+        "operationId": "get-hotels-id",
+        "parameters": [
+          {
+            "name": "hotel_id",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/inline_response_200_1"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/hotel-offers/{hotel_id}": {
+      "get": {
+        "tags": ["HotelOffers"],
+        "summary": "Get hotel offer by hotel ID",
+        "description": "Get holel offer by hotel ID",
+        "operationId": "get-hotel-offers-id",
+        "parameters": [
+          {
+            "name": "hotel_id",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/inline_response_200_2"
+                },
+                "examples": {
+                  "Exemplo": {
+                    "value": [
+                      {
+                        "id": "608dc59b692e01344b8a52e4",
+                        "hotelId": "608dc59a692e01344b8a52e3",
+                        "checkInDate": "2021-05-01",
+                        "checkOutDate": "2021-05-02",
+                        "rateCode": "RAC",
+                        "boardType": "ROOM_ONLY",
+                        "self": "https://test.api.amadeus.com/v2/shopping/hotel-offers/SFQEMEN1WQ",
+                        "available": true,
+                        "offerId": "SFQEMEN1WQ",
+                        "rateFamilyEstimated": {
+                          "code": "BAR",
+                          "type": "P"
+                        },
+                        "commission": {
+                          "amount": "0",
+                          "percentage": "0"
+                        },
+                        "room": {
+                          "type": "C1D",
+                          "typeEstimated": {
+                            "category": "STANDARD_ROOM",
+                            "beds": 1,
+                            "bedType": "DOUBLE"
+                          },
+                          "description": {
+                            "text": "FLEXIBLE RATE-Room only\nTHE HOTEL DOES NOT ACCEPT INVOICE PAYMENT.\nStandard Room with 1 double bed",
+                            "lang": "EN"
+                          }
+                        },
+                        "guests": {
+                          "adults": 2
+                        },
+                        "price": {
+                          "currency": "BRL",
+                          "total": "159.55",
+                          "taxes": [
+                            {
+                              "code": "CITY_TAX",
+                              "pricingFrequency": "PER_NIGHT",
+                              "pricingMode": "PER_PRODUCT",
+                              "amount": "0.00",
+                              "currency": "BRL",
+                              "included": true
+                            }
+                          ],
+                          "variations": {
+                            "average": {
+                              "base": "159.00"
+                            },
+                            "changes": [
+                              {
+                                "startDate": "2021-05-01",
+                                "endDate": "2021-05-02",
+                                "base": "159.00",
+                                "total": "159.00"
+                              }
+                            ]
+                          }
+                        },
+                        "policies": {
+                          "holdTime": {
+                            "deadline": "2021-05-01T18:00:00"
+                          },
+                          "guarantee": {
+                            "acceptedPayments": {
+                              "creditCards": [
+                                "AX",
+                                "CA",
+                                "DC",
+                                "EC",
+                                "IK",
+                                "VI"
+                              ],
+                              "methods": ["CREDIT_CARD"]
+                            }
+                          },
+                          "paymentType": "guarantee"
+                        }
+                      },
+                      {
+                        "id": "608dc59b692e01344b8a52e5",
+                        "hotelId": "608dc59a692e01344b8a52e3",
+                        "checkInDate": "2021-05-01",
+                        "checkOutDate": "2021-05-02",
+                        "rateCode": "RDP",
+                        "boardType": "ROOM_ONLY",
+                        "self": "https://test.api.amadeus.com/v2/shopping/hotel-offers/K2GUKWU1NI",
+                        "available": true,
+                        "offerId": "K2GUKWU1NI",
+                        "rateFamilyEstimated": {
+                          "code": "RAC",
+                          "type": "P"
+                        },
+                        "commission": {
+                          "amount": "0",
+                          "percentage": "0"
+                        },
+                        "room": {
+                          "type": "C1D",
+                          "typeEstimated": {
+                            "category": "STANDARD_ROOM",
+                            "beds": 1,
+                            "bedType": "DOUBLE"
+                          },
+                          "description": {
+                            "text": "Rack Rate-Room only\nTHE HOTEL DOES NOT ACCEPT INVOICE PAYMENT.\nStandard Room with 1 double bed",
+                            "lang": "EN"
+                          }
+                        },
+                        "guests": {
+                          "adults": 2
+                        },
+                        "price": {
+                          "currency": "BRL",
+                          "total": "159.55",
+                          "taxes": [
+                            {
+                              "code": "CITY_TAX",
+                              "pricingFrequency": "PER_NIGHT",
+                              "pricingMode": "PER_PRODUCT",
+                              "amount": "0.00",
+                              "currency": "BRL",
+                              "included": true
+                            }
+                          ],
+                          "variations": {
+                            "average": {
+                              "base": "159.00"
+                            },
+                            "changes": [
+                              {
+                                "startDate": "2021-05-01",
+                                "endDate": "2021-05-02",
+                                "base": "159.00",
+                                "total": "159.00"
+                              }
+                            ]
+                          }
+                        },
+                        "policies": {
+                          "holdTime": {
+                            "deadline": "2021-05-01T18:00:00"
+                          },
+                          "guarantee": {
+                            "acceptedPayments": {
+                              "creditCards": [
+                                "AX",
+                                "CA",
+                                "DC",
+                                "EC",
+                                "IK",
+                                "VI"
+                              ],
+                              "methods": ["CREDIT_CARD"]
+                            }
+                          },
+                          "paymentType": "guarantee"
+                        }
+                      },
+                      {
+                        "id": "608dc59b692e01344b8a52e6",
+                        "hotelId": "608dc59a692e01344b8a52e3",
+                        "checkInDate": "2021-05-01",
+                        "checkOutDate": "2021-05-02",
+                        "rateCode": "RA1",
+                        "boardType": "ROOM_ONLY",
+                        "self": "https://test.api.amadeus.com/v2/shopping/hotel-offers/V6BNRJL4SE",
+                        "available": true,
+                        "offerId": "V6BNRJL4SE",
+                        "rateFamilyEstimated": {
+                          "code": "BAR",
+                          "type": "P"
+                        },
+                        "commission": {
+                          "amount": "0",
+                          "percentage": "0"
+                        },
+                        "room": {
+                          "type": "C1D",
+                          "typeEstimated": {
+                            "category": "STANDARD_ROOM",
+                            "beds": 1,
+                            "bedType": "DOUBLE"
+                          },
+                          "description": {
+                            "text": "FLEXIBLE RATE-Room only\nTHE HOTEL DOES NOT ACCEPT INVOICE PAYMENT.\nStandard Room with 1 double bed",
+                            "lang": "EN"
+                          }
+                        },
+                        "guests": {
+                          "adults": 2
+                        },
+                        "price": {
+                          "currency": "BRL",
+                          "total": "99.55",
+                          "taxes": [
+                            {
+                              "code": "CITY_TAX",
+                              "pricingFrequency": "PER_NIGHT",
+                              "pricingMode": "PER_PRODUCT",
+                              "amount": "0.00",
+                              "currency": "BRL",
+                              "included": true
+                            }
+                          ],
+                          "variations": {
+                            "average": {
+                              "base": "99.00"
+                            },
+                            "changes": [
+                              {
+                                "startDate": "2021-05-01",
+                                "endDate": "2021-05-02",
+                                "base": "99.00",
+                                "total": "99.00"
+                              }
+                            ]
+                          }
+                        },
+                        "policies": {
+                          "holdTime": {
+                            "deadline": "2021-05-01T18:00:00"
+                          },
+                          "guarantee": {
+                            "acceptedPayments": {
+                              "creditCards": [
+                                "AX",
+                                "CA",
+                                "DC",
+                                "EC",
+                                "IK",
+                                "VI"
+                              ],
+                              "methods": ["CREDIT_CARD"]
+                            }
+                          },
+                          "paymentType": "guarantee"
+                        }
+                      },
+                      {
+                        "id": "608dc59b692e01344b8a52e7",
+                        "hotelId": "608dc59a692e01344b8a52e3",
+                        "checkInDate": "2021-05-01",
+                        "checkOutDate": "2021-05-02",
+                        "rateCode": "D20",
+                        "boardType": "ROOM_ONLY",
+                        "self": "https://test.api.amadeus.com/v2/shopping/hotel-offers/ORTGSR68JO",
+                        "available": true,
+                        "offerId": "ORTGSR68JO",
+                        "commission": {
+                          "amount": "0",
+                          "percentage": "0"
+                        },
+                        "room": {
+                          "type": "C1D",
+                          "typeEstimated": {
+                            "category": "STANDARD_ROOM",
+                            "beds": 1,
+                            "bedType": "DOUBLE"
+                          },
+                          "description": {
+                            "text": "Happy 20 Rate1234564569877896541-Room only\nTHE HOTEL DOES NOT ACCEPT INVOICE PAYMENT.\nStandard Room with 1 double bed",
+                            "lang": "EN"
+                          }
+                        },
+                        "guests": {
+                          "adults": 2
+                        },
+                        "price": {
+                          "currency": "BRL",
+                          "total": "127.75",
+                          "taxes": [
+                            {
+                              "code": "CITY_TAX",
+                              "pricingFrequency": "PER_NIGHT",
+                              "pricingMode": "PER_PRODUCT",
+                              "amount": "0.00",
+                              "currency": "BRL",
+                              "included": true
+                            }
+                          ],
+                          "variations": {
+                            "average": {
+                              "base": "127.20"
+                            },
+                            "changes": [
+                              {
+                                "startDate": "2021-05-01",
+                                "endDate": "2021-05-02",
+                                "base": "127.20",
+                                "total": "127.20"
+                              }
+                            ]
+                          }
+                        },
+                        "policies": {
+                          "holdTime": {
+                            "deadline": "2021-05-01T18:00:00"
+                          },
+                          "guarantee": {
+                            "acceptedPayments": {
+                              "creditCards": [
+                                "AX",
+                                "CA",
+                                "DC",
+                                "EC",
+                                "IK",
+                                "VI"
+                              ],
+                              "methods": ["CREDIT_CARD"]
+                            }
+                          },
+                          "paymentType": "guarantee"
+                        }
+                      },
+                      {
+                        "id": "608dc59b692e01344b8a52e8",
+                        "hotelId": "608dc59a692e01344b8a52e3",
+                        "checkInDate": "2021-05-01",
+                        "checkOutDate": "2021-05-02",
+                        "rateCode": "PIB",
+                        "boardType": "ROOM_ONLY",
+                        "self": "https://test.api.amadeus.com/v2/shopping/hotel-offers/O3UWNVGCWK",
+                        "available": true,
+                        "offerId": "O3UWNVGCWK",
+                        "rateFamilyEstimated": {
+                          "code": "BAR",
+                          "type": "P"
+                        },
+                        "commission": {
+                          "amount": "0",
+                          "percentage": "0"
+                        },
+                        "room": {
+                          "type": "C1D",
+                          "typeEstimated": {
+                            "category": "STANDARD_ROOM",
+                            "beds": 1,
+                            "bedType": "DOUBLE"
+                          },
+                          "description": {
+                            "text": "FLEXIBLE RATE-Room only\nTHE HOTEL DOES NOT ACCEPT INVOICE PAYMENT.\nStandard Room with 1 double bed",
+                            "lang": "EN"
+                          }
+                        },
+                        "guests": {
+                          "adults": 2
+                        },
+                        "price": {
+                          "currency": "BRL",
+                          "total": "159.55",
+                          "taxes": [
+                            {
+                              "code": "CITY_TAX",
+                              "pricingFrequency": "PER_NIGHT",
+                              "pricingMode": "PER_PRODUCT",
+                              "amount": "0.00",
+                              "currency": "BRL",
+                              "included": true
+                            }
+                          ],
+                          "variations": {
+                            "average": {
+                              "base": "159.00"
+                            },
+                            "changes": [
+                              {
+                                "startDate": "2021-05-01",
+                                "endDate": "2021-05-02",
+                                "base": "159.00",
+                                "total": "159.00"
+                              }
+                            ]
+                          }
+                        },
+                        "policies": {
+                          "holdTime": {
+                            "deadline": "2021-05-01T18:00:00"
+                          },
+                          "guarantee": {
+                            "acceptedPayments": {
+                              "creditCards": [
+                                "AX",
+                                "CA",
+                                "DC",
+                                "EC",
+                                "IK",
+                                "VI"
+                              ],
+                              "methods": ["CREDIT_CARD"]
+                            }
+                          },
+                          "paymentType": "guarantee"
+                        }
+                      },
+                      {
+                        "id": "608dc59b692e01344b8a52e9",
+                        "hotelId": "608dc59a692e01344b8a52e3",
+                        "checkInDate": "2021-05-01",
+                        "checkOutDate": "2021-05-02",
+                        "rateCode": "RDI",
+                        "boardType": "ROOM_ONLY",
+                        "self": "https://test.api.amadeus.com/v2/shopping/hotel-offers/5YLF01DVPH",
+                        "available": true,
+                        "offerId": "5YLF01DVPH",
+                        "rateFamilyEstimated": {
+                          "code": "RAC",
+                          "type": "P"
+                        },
+                        "commission": {
+                          "amount": "0",
+                          "percentage": "0"
+                        },
+                        "room": {
+                          "type": "C1D",
+                          "typeEstimated": {
+                            "category": "STANDARD_ROOM",
+                            "beds": 1,
+                            "bedType": "DOUBLE"
+                          },
+                          "description": {
+                            "text": "Rack rate-Room only\nTHE HOTEL DOES NOT ACCEPT INVOICE PAYMENT.\nStandard Room with 1 double bed",
+                            "lang": "EN"
+                          }
+                        },
+                        "guests": {
+                          "adults": 2
+                        },
+                        "price": {
+                          "currency": "BRL",
+                          "total": "159.55",
+                          "taxes": [
+                            {
+                              "code": "CITY_TAX",
+                              "pricingFrequency": "PER_NIGHT",
+                              "pricingMode": "PER_PRODUCT",
+                              "amount": "0.00",
+                              "currency": "BRL",
+                              "included": true
+                            }
+                          ],
+                          "variations": {
+                            "average": {
+                              "base": "159.00"
+                            },
+                            "changes": [
+                              {
+                                "startDate": "2021-05-01",
+                                "endDate": "2021-05-02",
+                                "base": "159.00",
+                                "total": "159.00"
+                              }
+                            ]
+                          }
+                        },
+                        "policies": {
+                          "holdTime": {
+                            "deadline": "2021-05-01T18:00:00"
+                          },
+                          "guarantee": {
+                            "acceptedPayments": {
+                              "creditCards": [
+                                "AX",
+                                "CA",
+                                "DC",
+                                "EC",
+                                "IK",
+                                "VI"
+                              ],
+                              "methods": ["CREDIT_CARD"]
+                            }
+                          },
+                          "paymentType": "guarantee"
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Hotel": {
+        "title": "Hotel",
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string"
+          },
+          "hotelId": {
+            "type": "string"
+          },
+          "chainCode": {
+            "type": "string"
+          },
+          "dupeId": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "rating": {
+            "type": "string"
+          },
+          "cityCode": {
+            "type": "string"
+          },
+          "latitude": {
+            "type": "string"
+          },
+          "longitude": {
+            "type": "string"
+          },
+          "hotelDistance": {
+            "$ref": "#/components/schemas/Hotel_hotelDistance"
+          },
+          "address": {
+            "$ref": "#/components/schemas/Hotel_address"
+          },
+          "contact": {
+            "$ref": "#/components/schemas/Hotel_contact"
+          },
+          "description": {
+            "$ref": "#/components/schemas/Hotel_description"
+          },
+          "media": {
+            "$ref": "#/components/schemas/Hotel_media"
+          },
+          "amenities": {
+            "type": "array",
+            "items": {}
+          }
+        },
+        "description": "Hotel"
+      },
+      "HotelOffers": {
+        "title": "HotelOffers",
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "hotelId": {
+            "type": "string"
+          },
+          "checkInDate": {
+            "type": "string"
+          },
+          "checkOutDate": {
+            "type": "string"
+          },
+          "rateCode": {
+            "type": "string"
+          },
+          "boardType": {
+            "type": "string"
+          },
+          "self": {
+            "type": "string"
+          },
+          "available": {
+            "type": "boolean"
+          },
+          "offerId": {
+            "type": "string"
+          },
+          "rateFamilyEstimated": {
+            "$ref": "#/components/schemas/HotelOffers_rateFamilyEstimated"
+          },
+          "commission": {
+            "$ref": "#/components/schemas/HotelOffers_commission"
+          },
+          "room": {
+            "$ref": "#/components/schemas/HotelOffers_room"
+          },
+          "guests": {
+            "$ref": "#/components/schemas/HotelOffers_guests"
+          },
+          "price": {
+            "$ref": "#/components/schemas/HotelOffers_price"
+          },
+          "policies": {
+            "$ref": "#/components/schemas/HotelOffers_policies"
+          },
+          "total": {
+            "type": "string"
+          }
+        },
+        "description": "Hotel offers"
+      },
+      "inline_response_200": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Hotel"
+          },
+          {
+            "required": ["data"],
+            "type": "object",
+            "properties": {
+              "data": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/Hotel"
+                }
+              }
+            }
+          }
+        ]
+      },
+      "inline_response_200_1": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Hotel"
+          },
+          {
+            "required": ["data"],
+            "type": "object",
+            "properties": {
+              "data": {
+                "$ref": "#/components/schemas/Hotel"
+              }
+            }
+          }
+        ]
+      },
+      "inline_response_200_2": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/HotelOffers"
+          },
+          {
+            "required": ["data"],
+            "type": "object",
+            "properties": {
+              "data": {
+                "$ref": "#/components/schemas/HotelOffers"
+              }
+            }
+          }
+        ]
+      },
+      "Hotel_hotelDistance": {
+        "type": "object",
+        "properties": {
+          "distance": {
+            "type": "string"
+          },
+          "distanceUnit": {
+            "type": "string"
+          }
+        }
+      },
+      "Hotel_address": {
+        "type": "object",
+        "properties": {
+          "lines": {
+            "type": "string"
+          },
+          "postalCode": {
+            "type": "string"
+          },
+          "cityName": {
+            "type": "string"
+          },
+          "countryCode": {
+            "type": "string"
+          },
+          "stateCode": {
+            "type": "string"
+          }
+        }
+      },
+      "Hotel_contact": {
+        "type": "object",
+        "properties": {
+          "phone": {
+            "type": "string"
+          },
+          "fax": {
+            "type": "string"
+          },
+          "email": {
+            "type": "string"
+          }
+        }
+      },
+      "Hotel_description": {
+        "type": "object",
+        "properties": {
+          "lang": {
+            "type": "string"
+          },
+          "text": {
+            "type": "string"
+          }
+        }
+      },
+      "Hotel_media": {
+        "type": "object",
+        "properties": {
+          "uri": {
+            "type": "string"
+          },
+          "category": {
+            "type": "string"
+          }
+        }
+      },
+      "HotelOffers_rateFamilyEstimated": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string"
+          }
+        }
+      },
+      "HotelOffers_commission": {
+        "type": "object",
+        "properties": {
+          "amount": {
+            "type": "string"
+          },
+          "percentage": {
+            "type": "string"
+          }
+        }
+      },
+      "HotelOffers_room_typeEstimated": {
+        "type": "object",
+        "properties": {
+          "category": {
+            "type": "string"
+          },
+          "beds": {
+            "type": "number"
+          },
+          "bedType": {
+            "type": "string"
+          }
+        }
+      },
+      "HotelOffers_room_description": {
+        "type": "object",
+        "properties": {
+          "text": {
+            "type": "string"
+          },
+          "land": {
+            "type": "string"
+          }
+        }
+      },
+      "HotelOffers_room": {
+        "type": "object",
+        "properties": {
+          "typeEstimated": {
+            "$ref": "#/components/schemas/HotelOffers_room_typeEstimated"
+          },
+          "description": {
+            "$ref": "#/components/schemas/HotelOffers_room_description"
+          }
+        }
+      },
+      "HotelOffers_guests": {
+        "type": "object",
+        "properties": {
+          "adult": {
+            "type": "string"
+          }
+        }
+      },
+      "HotelOffers_price": {
+        "type": "object",
+        "properties": {
+          "currency": {
+            "type": "string"
+          },
+          "total": {
+            "type": "string"
+          },
+          "taxes": {
+            "type": "object"
+          },
+          "variations": {
+            "type": "array",
+            "items": {}
+          }
+        }
+      },
+      "HotelOffers_policies_holdTime": {
+        "type": "object",
+        "properties": {
+          "deadline": {
+            "type": "string"
+          }
+        }
+      },
+      "HotelOffers_policies_guarantee": {
+        "type": "object",
+        "properties": {
+          "acceptedPayments": {
+            "type": "array",
+            "items": {}
+          }
+        }
+      },
+      "HotelOffers_policies": {
+        "type": "object",
+        "properties": {
+          "holdTime": {
+            "$ref": "#/components/schemas/HotelOffers_policies_holdTime"
+          },
+          "guarantee": {
+            "$ref": "#/components/schemas/HotelOffers_policies_guarantee"
+          }
+        }
+      }
+    }
+  }
+}
