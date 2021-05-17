@@ -13,6 +13,7 @@
 </p>
 <br />
 
+
 ## API Doc https://hotl-service.herokuapp.com/api-docs/
 ## Front-end preview https://hotel-app-two.vercel.app/
 

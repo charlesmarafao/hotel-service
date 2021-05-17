@@ -16,7 +16,7 @@ jobs:
         run: npm install
 
       - name: Collect coverage
-        run: npm run test:cov > OUT; sed -n 5,8p OUT > .github/workflows/COVERAGE_REPORT
+        run: npm run test:cov > OUT; sed -n 3,9p OUT > .github/workflows/COVERAGE_REPORT
 
       - uses: harupy/comment-on-pr@master
         env:
